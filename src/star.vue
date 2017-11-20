@@ -6,8 +6,10 @@
             <stop :offset="getFill" :stop-color="(rtl) ? activeColor : inactiveColor" />
         </linearGradient>
 
-        <polygon :points="starPointsToString" :fill="getGradId" :stroke="borderColor" :stroke-width="borderWidth" />
-        <polygon :points="starPointsToString" :fill="getGradId" />
+        <g fill="none" fill-rule="evenodd">
+            <path :fill="getGradId" d="M24 4l-6.2 13.2-13.8 2 10 10.2L11.6 44 24 37.2 36.4 44 34 29.6l10-10.2-13.8-2.2z"></path>
+            <path d="M0 0h48v48H0z"></path>
+        </g>
     </svg>
 </template>
 
@@ -20,7 +22,7 @@ export default {
         },
         size: {
             type: Number,
-            default: 50
+            default: 48
         },
         starId: {
             type: Number,

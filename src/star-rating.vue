@@ -34,11 +34,11 @@ export default {
         },
         activeColor: {
             type: String,
-            default: '#ffd055'
+            default: '#FFC107'
         },
         inactiveColor: {
             type: String,
-            default: '#d8d8d8'
+            default: 'rgba(0,0,0,0.18)'
         },
         maxRating: {
             type: Number,
@@ -163,6 +163,9 @@ export default {
 }
 .vue-star-rating-pointer {
     cursor: pointer;
+}
+.vue-star-rating-pointer.vue-star-rating-star:not(:first-child) {
+    margin-left: 8px;
 }
 .vue-star-rating {
     display: flex;
