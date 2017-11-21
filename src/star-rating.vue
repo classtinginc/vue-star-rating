@@ -165,8 +165,10 @@ export default {
 .vue-star-rating-pointer {
     cursor: pointer;
 }
-.vue-star-rating-pointer.vue-star-rating-star:not(:first-child) {
-    margin-left: 8px;
+@media (min-width: 350px) {
+    .vue-star-rating-pointer.vue-star-rating-star:not(:first-child) {
+        margin-left: 8px;
+    }
 }
 .vue-star-rating {
     display: flex;
