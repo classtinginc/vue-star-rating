@@ -111,6 +111,7 @@ export default {
             if (!this.readOnly) {
                 this.currentRating = this.selectedRating
                 this.createStars(this.shouldRound)
+                this.$emit('current-rating', this.currentRating)
             }
         },
         createStars(round = true) {
